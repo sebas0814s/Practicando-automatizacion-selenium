@@ -1,30 +1,22 @@
-# Ejercicio automatización:
+# Ejercicio automatización
 
-Crear un nuevo proyecto de automatización en base al proyecto trabajado en las anteriores clases
-en el cual deben automatizar los siguientes escenarios de la página https://www.globalsqa.com/angularJs-protractor/BankingProject/#/login:
+Crear un nuevo proyecto de automatización en base al proyecto trabajado en las clases, automatizando los siguientes escenarios de la página:
+https://www.globalsqa.com/angularJs-protractor/BankingProject/#/login
 
-## Escenarios Depósito:
-Ingresar a la pagina
-Dar click en el botón Customer Login
-Ingresar con cualquiera de los usuario disponibles en el desplegable
-Realizar un Deposito de cualquier monto
-Validar el texto Deposit Successful
+Escenarios
+- Deposito: ingresar, seleccionar un usuario, realizar un deposito y validar Deposit Successful.
+- Consulta de saldo: verificar que el saldo se actualiza tras un deposito.
+- Retiro: ingresar, retirar un monto y validar Transaction successful, y que el saldo se reduce.
 
-## Ingresar a la pagina
-Dar click en el botón Customer Login
-Ingresar con cualquiera de los usuario disponibles en el desplegable
-Realizar un Deposito de cualquier monto
-Validar que el valor depositado se sume en el Balance de la cuenta
+Estructura del proyecto
+- xyz-bank-selenium-main: código fuente y tests
+- pom.xml: dependencias Maven para Selenium y JUnit
+- .gitignore actualizado para evitar binarios y drivers
 
-## Escenarios Retiro:
-Ingresar a la pagina
-Dar click en el botón customer login
-Ingresar con cualquiera de los usuario disponibles en el desplegable
-Realizar un Retiro (Withdrawl) de cualquier monto
-Validar el texto Transaction successful
+Cómo ejecutar
+- Requisitos: Java 11+, Maven
+- En la carpeta xyz-bank-selenium-main, ejecutar: mvn test
 
-## Ingresar a la pagina
-Dar click en el botón customer login
-Ingresar con cualquiera de los usuario disponibles en el desplegable
-Realizar un Retiro (Withdrawl) de cualquier monto
-Validar que el valor retirado se reste en el Balance de la cuenta
+Notas
+- Se recomienda usar WebDriverManager para gestionar los drivers de navegador de forma automática (evita incluir binarios en el repo).
+- Los selectores pueden requerir ajustes si la UI cambia; se recomienda hacerlos más robustos (IDs, nombres, etc.).

@@ -1,1 +1,5 @@
 lib
+# Exclude downloaded drivers and local IDE configs
+bin/
+src/drivers/
+*.exe
